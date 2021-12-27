@@ -4,10 +4,12 @@ import 'package:flutter/material.dart';
 
 class ThemeExit extends StatelessWidget {
   final String text;
+  final VoidCallback onPressed;
 
   const ThemeExit({
     Key? key,
     required this.text,
+    required this.onPressed,
   }) : super(key: key);
 
   @override
@@ -28,7 +30,7 @@ class ThemeExit extends StatelessWidget {
         borderRadius: BorderRadius.circular(5),
       ),
       child: TextButton(
-        onPressed: () {},
+        onPressed: onPressed,
         child: Row(
           children: [
             const Expanded(flex: 1, child: SizedBox()),
